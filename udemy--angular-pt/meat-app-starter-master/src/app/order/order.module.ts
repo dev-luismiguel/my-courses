@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const ROUTES: Routes = [
     { path: '', component: OrderComponent }
-]
+];
 
 @NgModule({
     declarations: [ OrderComponent, OrderItemsComponent, DeliveryCostsComponent ],
