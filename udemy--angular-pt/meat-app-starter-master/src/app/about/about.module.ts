@@ -4,10 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const ROUTES: Routes = [
     { path: '', component: AboutComponent }
-]
+];
 
 @NgModule({
-    declarations:[ AboutComponent ],
+    declarations: [ AboutComponent ],
     imports: [RouterModule.forChild(ROUTES)]
 })
 export class AboutModule {}
