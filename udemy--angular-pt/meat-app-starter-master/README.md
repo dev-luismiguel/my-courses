@@ -8,7 +8,7 @@
 
 ### Initializing the server
 
-`ng serve` ou `npm start`
+`ng serve` or `npm start`
 
 ## 2. Backend
 
@@ -20,6 +20,10 @@
 
 `json-server db.json`
 
+
+To run with SSL:
+nodemon --watch backend/dist/server.js
+node backend/dist/server
 
 ## Credits
 
