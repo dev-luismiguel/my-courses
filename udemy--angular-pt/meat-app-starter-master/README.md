@@ -21,9 +21,11 @@
 `json-server db.json`
 
 
-To run with SSL:
-nodemon --watch backend/dist/server.js
-node backend/dist/server
+### To run with SSL:
+
+`nodemon --watch backend/dist/server.js`
+
+`node backend/dist/server`
 
 ## Credits
 
