@@ -2,7 +2,6 @@ import { MenuItem } from '../restaurant-detail/menu-item/menu-item.model';
 import { Observable } from 'rxjs/Rx';
 import { MEAT_API } from '../app.api';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { ErrorHandler } from '../app.error-handler';
 
 import { Injectable } from '@angular/core';
 import { Restaurant } from './restaurant/restaurant.model';

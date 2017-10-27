@@ -1,7 +1,8 @@
+import { ApplicationErrorHandler } from './app.error-handler';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shopping-cart.component';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID, ErrorHandler } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,6 +23,8 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { OrderSumaryComponent } from './order-sumary/order-sumary.component';
 import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './security/login/login.component';
+import { UserDetailComponent } from './header/user-detail/user-detail.component';
 
 
 @NgModule({
@@ -38,6 +41,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MenuItemComponent,
     OrderSumaryComponent,
     NotFoundComponent,
+    LoginComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
     BrowserAnimationsModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'},
+              {provide: ErrorHandler, useClass: ApplicationErrorHandler}],
+  // {provide: LocationStrategy, useClass: HashLocationStrategy},
   bootstrap: [AppComponent]
 })
 export class AppModule { }
