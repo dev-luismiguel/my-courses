@@ -21,7 +21,7 @@ export class RestaurantsService {
     return this.http.get<Restaurant[]>(MEAT_API + '/restaurants', { params: params });
   }
 
-  restaurantsById(id: string): Observable<Restaurant>{
+  restaurantsById(id: string): Observable<Restaurant> {
     return this.http.get<Restaurant>(MEAT_API + '/restaurants/' + id);
   }
 

@@ -26,6 +26,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './security/login/login.component';
 import { UserDetailComponent } from './header/user-detail/user-detail.component';
 
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { UserDetailComponent } from './header/user-detail/user-detail.component'
     BrowserAnimationsModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'pt-BR'},
-              {provide: ErrorHandler, useClass: ApplicationErrorHandler}],
+              {provide: ErrorHandler, useClass: ApplicationErrorHandler},
+              CookieService ],
   // {provide: LocationStrategy, useClass: HashLocationStrategy},
   bootstrap: [AppComponent]
 })

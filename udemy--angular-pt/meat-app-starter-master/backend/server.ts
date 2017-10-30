@@ -19,7 +19,7 @@ server.use(jsonServer.bodyParser);
 
 // middleware for login
 server.post('/login', handleAuthentication);
-server.use('/orders', handleAuthentication);
+server.use('/orders', handleAuthorization);
 
 // Use default router
 server.use(router);
