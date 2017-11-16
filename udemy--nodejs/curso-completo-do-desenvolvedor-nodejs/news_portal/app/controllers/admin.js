@@ -20,7 +20,7 @@ module.exports.noticias_salvar = function(application, req, res) {
     }
     
     var connection = application.config.dbConnection();
-    var noticiasModel = new app.app.models.NoticiasDAO(connection);
+    var noticiasModel = new application.app.models.NoticiasDAO(connection);
     noticiasModel.salvarNoticia(noticia, function(error, result) {
         res.redirect('/noticias');
     });
